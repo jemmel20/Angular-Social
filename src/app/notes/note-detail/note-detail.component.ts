@@ -13,7 +13,7 @@ export class NoteDetailComponent {
 
   @Input()
   note: Note;
-  dislike: Note;
+  
 
   constructor(private noteService: NoteService) { }
 
@@ -25,13 +25,7 @@ export class NoteDetailComponent {
     }
   }
   
-  addDislikeToNote(val: number) {
-    if (this.dislike.id) {
-      this.noteService.updateNote(this.dislike.id, { hearts: val + 1 });
-    } else {
-      console.error('Note missing ID!');
-    }
-  }
+  
 
   deleteNote(id: string) {
     this.noteService.deleteNote(id);

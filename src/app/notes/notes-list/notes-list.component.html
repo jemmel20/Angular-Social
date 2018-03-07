@@ -1,11 +1,13 @@
-<h1>Firestore Notes</h1>
-<p>This is a very basic demo of the Firestore database.</p>
 
-<input [(ngModel)]="content" placeholder="Add your own note" class="input">
+<h1>Angular Social Website</h1>
+<p>Welcome to your Profile!</p>
+
+<input [(ngModel)]="content" placeholder="What's on your Thoughts?" class="input" style="height:75px">
 
 
-<button class="button is-success" (click)="createNote()" [disabled]="content?.length < 2 || content?.length > 200">
-  Add Note
+<button class="button is-info" (click)="createNote()" [disabled]="content?.length < 2 || content?.length > 200">
+  Post
+
 </button>
 <hr>
 <div *ngFor="let note of notes | async">
